@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -25,21 +26,15 @@ public class MainActivity2 extends AppCompatActivity {
         lv = (ListView) findViewById(R.id.listView);
 
         ArrayList<String> listaNombre = new ArrayList<>();
-        listaNombre.add("Abraham");
-        listaNombre.add("Azael");
-        listaNombre.add("Christian");
-        listaNombre.add("David");
-        listaNombre.add("Erika");
-        listaNombre.add("Gabriel");
-        listaNombre.add("Erika");
-        listaNombre.add("Jonathan");
-        listaNombre.add("Luis");
-        listaNombre.add("Jose");
-        listaNombre.add("Martin");
-        listaNombre.add("Manuel");
-        listaNombre.add("Ramiro");
-        listaNombre.add("Yahir");
-        listaNombre.add("Eduardo");
+        listaNombre.add("Jason Sudeikis");
+        listaNombre.add("Sarah Niles");
+        listaNombre.add("Nick Mohammed");
+        listaNombre.add("Brendan Hunt");
+        listaNombre.add("Brett Goldstein");
+        listaNombre.add("Phil Dunster");
+        listaNombre.add("Jeremy Swift");
+        listaNombre.add("Juno Temple");
+        listaNombre.add("Hannah Waddingham");
 
         ArrayAdapter ad = new ArrayAdapter(MainActivity2.this,
                 android.R.layout.simple_list_item_1,
@@ -62,6 +57,10 @@ public class MainActivity2 extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 System.out.println("" +i);
                 System.out.println(adapterView.getItemAtPosition(i).toString());
+                Intent intent = new Intent(MainActivity2.this, MainActivity3.class);
+                intent.putExtra("id", "" +i);
+                intent.putExtra("name", adapterView.getItemAtPosition(i).toString());
+                startActivity(intent);
 
             }
         });
