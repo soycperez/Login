@@ -73,7 +73,7 @@
                 android:hint="Name"
                 android:inputType="textPersonName"
                 android:paddingStart="15dp"
-                android:text=""
+                android:text="root"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
@@ -93,6 +93,7 @@
                 android:inputType="textPassword"
                 android:paddingStart="15dp"
 
+                android:text="root"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
